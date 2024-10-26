@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Meu Portfólio</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background 0.5s, color 0.5s; /* Transição suave para cores */
+        }
+
+        /* Estilo do Header */
+        header {
+            margin-top: 20px;
+        }
+
+        header img {
+            border-radius: 50%;
+        }
+
+        /* Estilo das Habilidades */
+        .habilidades {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .habilidade-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .habilidade-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Container dos Projetos */
+        .container {
+            margin-top: 20px;
+        }
+
+        /* Estilo dos Projetos */
+        .project {
+            margin-bottom: 20px;
+        }
+
+        /* Estilo da Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #f8f9fa;
+            border-left: 1px solid #ccc;
+            padding: 20px;
+            display: none; /* Inicialmente oculta */
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+        .modal-body p {
+    color: black; /* Define a cor do texto dos parágrafos dentro do modal como preta */
+}
+
+.modal-title {
+    color: black; /* Define a cor do título do modal como preta */
+}
+
+    </style>
+</head>
+
+<body id="mainBody">
+    <header class="container text-center">
+        <img src="Untitled image.png" alt="avatar da Fernanda" class="rounded-circle" width="150" height="150">
+        <p class="lead"><strong>Eu sou Sara</strong></p>
+        <h1>Bem vindo ao Meu Portfólio</h1>
+        <p>Sou estudante do Morelli a mais de 5 anos, começei bem pequenininha, logo no sexto ano, e esse é meu Portfólio, onde mostra minhas memorias favoritas que fiz nessa escola! <3</p>
+        <p>Minhas Memorias:</p>
+        <p>cada corzinha significa uma pagina de memorias que fiz aqui</p>
+        <hr>
+        <div class="habilidades">
+            <img src="download (1).jpeg" alt="HTML" class="habilidade-icon" onclick="changeTheme('white')">
+            <img src="download.png" alt="CSS" class="habilidade-icon" onclick="changeTheme('black')">
+            <img src="download.jpeg" alt="JavaScript" class="habilidade-icon" onclick="changeTheme('purple')">
+            <img src="images.jpeg" alt="Scratch" class="habilidade-icon" onclick="changeTheme('green')">
+        </div>
+        <hr>
+        
+    </header>
+
+    <main class="container mt-5">
+        <h2>Minhas Memorias: s2</h2>
+        <div class="row" id="projects">
+            <!-- Projetos com cor branca -->
+            <div class="col-md-4 project white-project">
+                <div class="card">
+                    <img src="memorias 3.jpg" class="card-img-top" alt="Imagem do projeto de biblioteca virtual">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>AMIGOS</strong></h5>
+                        <p class="card-text">Clique para ver mais</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal1">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 project white-project">
+                <div class="card">
+                    <img src="MEMORIA 5.jpg" class="card-img-top" alt="Imagem do projeto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Projeto 2</h5>
+                        <p class="card-text">CLIQUE PARA VER</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal2">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 project white-project">
+                <div class="card">
+                    <img src="memoria 2.jpg" class="card-img-top" alt="Imagem do projeto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">DOUGLAS</h5>
+                        <p class="card-text">Clique para ver mais!</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal3">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Projetos com cor preta -->
+            <div class="col-md-4 project black-project" style="display: none;">
+                <div class="card">
+                    <img src="bio.jpg" class="card-img-top" alt="Imagem do projeto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">BIOTECNOLOGIA</h5>
+                        <p class="card-text">CLoque para ver mais!</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal4">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 project black-project" style="display: none;">
+                <div class="card">
+                    <img src="memoria 10.jpg" class="card-img-top" alt="Imagem do projeto 5">
+                    <div class="card-body">
+                        <h5 class="card-title">DUDU</h5>
+                        <p class="card-text">Clique para ver mais!</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal5">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 project black-project" style="display: none;">
+                <div class="card">
+                    <img src="memoria 8.jpg" class="card-img-top" alt="Imagem do projeto 6">
+                    <div class="card-body">
+                        <h5 class="card-title">EMOÇÔES</h5>
+                        <p class="card-text">Clique para ver mais!</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal6">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Projetos com cor roxa -->
+            <div class="col-md-4 project purple-project" style="display: none;">
+                <div class="card">
+                    <img src="memorias 12.jpg" class="card-img-top" alt="Imagem do projeto 7">
+                    <div class="card-body">
+                        <h5 class="card-title">PRIMEIRO DIA</h5>
+                        <p class="card-text">Clique para ver mais</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal7">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 project purple-project" style="display: none;">
+                <div class="card">
+                    <img src="memoria 1.jpg" class="card-img-top" alt="Imagem do projeto 8">
+                    <div class="card-body">
+                        <h5 class="card-title">ROBOTICA</h5>
+                        <p class="card-text">Clique para ver mais</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal8">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 project purple-project" style="display: none;">
+                <div class="card">
+                    <img src="memoria 9.jpg" class="card-img-top" alt="Imagem do projeto 9">
+                    <div class="card-body">
+                        <h5 class="card-title">AMIGOS</h5>
+                        <p class="card-text">Cique para ver mais</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal9">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Projetos com cor verde -->
+            <div class="col-md-4 project green-project" style="display: none;">
+                <div class="card">
+                    <img src="memorias 13.jpg" class="card-img-top" alt="Imagem do projeto 10">
+                    <div class="card-body">
+                        <h5 class="card-title">Intervalo</h5>
+                        <p class="card-text">Clique para ver mais </p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal10">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 project green-project" style="display: none;">
+                <div class="card">
+                    <img src="memoria 14.jpg" class="card-img-top" alt="Imagem do projeto 11">
+                    <div class="card-body">
+                        <h5 class="card-title">BIUI</h5>
+                        <p class="card-text">Coque para ver mais</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal11">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 project green-project" style="display: none;">
+                <div class="card">
+                    <img src="memoria 15.jpg" class="card-img-top" alt="Imagem do projeto 12">
+                    <div class="card-body">
+                        <h5 class="card-title">Primeiro dia 2024</h5>
+                        <p class="card-text">Clique para ver mais!</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal12">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h3>Minhas Redes Sociais</h3>
+        <p><a href="https://www.instagram.com/_sara.vscz/" class="btn btn-link">instagram</a></p>
+        <p><a href="#" class="btn btn-link">GitHub</a></p>
+        <p><a href="#" class="btn btn-link">Twitter</a></p>
+        <button class="btn btn-danger" onclick="toggleSidebar()">Fechar</button>
+    </div>
+
+    <footer class="container text-center">
+        <p>Sarinha 2ºC - Claudio Padre Morelli &copy; 2024</p>
+        <button class="btn btn-primary" onclick="toggleSidebar()">Mostrar Redes Sociais</button>
+    </footer>
+
+    <!-- Modais para Projetos -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">Meus Amigos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="memorias 3.jpg" class="img-fluid" alt="Projeto 1">
+                    <p>Esses são meus melhores amigos. A da direita é a Millena, que eu conheço e sou amiga desde 2019 quando eu estava no sexto ano. A do meio é a Heloísa, que chegou um pouquinho depois, em 2021 no oitavo ano. e por último o Douglas que me aproximei em 2023. Nunca imaginei ter uma amizade tão forte assim como a deles, e tenho certeza que vou levá-los para minha vida.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel2">SALA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="MEMORIA 5.jpg" class="img-fluid" alt="Projeto 2">
+                    <p>Eu simplesmente nao posso esquecer das amizades que fiz na sala, que são muito especiais pra mim, e que mesmo tendo que vir todos os dias, aliaviam um pouco</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel3">DOUGLAS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="memoria 2.jpg" class="img-fluid" alt="Projeto 3">
+                    <p>Douglas é meu melhor amigo, um laço que o colégio me proporcionou. Embora nos conhecêssemos há bastante tempo, foi só no final de 2023 que nos tornamos realmente próximos. Desde então, nossa amizade cresceu intensamente, e hoje eu o considero um irmão. Compartilhamos risadas, desafios e momentos inesquecíveis, tornando nossa conexão ainda mais especial.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">BIOTECNOLOGIA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="bio.jpg" class="img-fluid" alt="Projeto 1">
+                    <p>Aula de campo de BIOTECNOLOGIA</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">DUDU</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/projeto-1.png" class="img-fluid" alt="Projeto 1">
+                    <p>DUDU invadiu a horta das tias</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">EMOÇÔES</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="memoria 8.jpg" class="img-fluid" alt="Projeto 1">
+                    <p>WorkShop de emoções feito pela sala de humanas do morelli, saimos de sala e fomos passar um tempo la, vendo o WorkShop do 2ºB</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">Projeto 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="memorias 12.jpg" class="img-fluid" alt="Projeto 1">
+                    <p>Acho que uma coisaque é inesquecivel é o primeiro dia de aula né? aquela mistura de emoções que a gente nao sabe se vai gostar ou nao, e é exatamente oque essa foto mostra, meu primeiro dia de aula, o 6º ano no Morelli</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">ROBOTICA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="memoria 1.jpg" class="img-fluid" alt="Projeto 1">
+                    <p>No novo ensino médio, a disciplina de robótica foi uma novidade desafiadora para mim, especialmente porque eu optei pela área de exatas. No início, me assustei com a complexidade dos conceitos e a lógica por trás dos códigos e circuitos montados. No entanto, à medida que fui explorando o conteúdo, percebi o quanto a robótica é fascinante. Ela une criatividade e tecnologia, permitindo criar soluções inovadoras para problemas reais.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal9" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">Projeto 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="memoria 9.jpg" class="img-fluid" alt="Projeto 1">
+                    <p>.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal10" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">Projeto    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="memorias 13.jpg" class="img-fluid" alt="Projeto 1">
+                    <p>Resenha no intervalo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal11" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">BIUI</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="memoria 14.jpg" class="img-fluid" alt="Projeto 1">
+                    <p>Aula do meu professor favorito</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal12" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">Projeto 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="memoria 15.jpg" class="img-fluid" alt="Projeto 1">
+                    <p>E pra terminar, o primeiro dia desse ano, fazendo memorias.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Adicione modais para os demais projetos aqui -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function changeTheme(theme) {
+            document.body.style.backgroundColor = theme === 'white' ? '#fff' : theme === 'black' ? '#000' : theme === 'purple' ? '#5f4b8a' : theme === 'green' ? '#2d752c' : '#fff';
+            document.body.style.color = theme === 'white' ? '#000' : '#fff';
+            // Mostrar/ocultar projetos conforme a cor
+            document.querySelectorAll('.project').forEach(project => {
+                project.style.display = 'none'; // Esconde todos os projetos
+            });
+            document.querySelectorAll(`.${theme}-project`).forEach(project => {
+                project.style.display = 'block'; // Mostra apenas os projetos da cor selecionada
+            });
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none'; // Alterna a visibilidade
+        }
+    </script>
+
+<audio autoplay loop> <!--agora com autoplay e sem controls-->
+ 
+    <source src="fundo.mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+
+</body>
+
+</html>
